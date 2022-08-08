@@ -29,4 +29,4 @@ app.set('view engine', 'ejs');
 const routes = require('./server/routes/indexRoutes.js')
 app.use('/', routes);
 
-app.listen(process.env.PORT || 3000 ,  function() => console.log(`Listening to port ${port}`));
+app.listen(process.env.PORT || 3000 , () => console.log(`Listening to port ${port}`));
