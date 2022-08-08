@@ -1,1 +1,1 @@
-web: nodenon app.js
+web: node app.js
