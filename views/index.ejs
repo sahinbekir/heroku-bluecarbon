@@ -1,0 +1,273 @@
+<!--<script src="/js/_js/_lib/pace.min.js"></script>-->
+<div class="loading">
+<div class="loading-img">
+    <img src="img/<%- journey_so_far[0].background_img.loading_img %>" alt="">
+    <div id="loading-prc">100%</div>
+</div>
+</div>
+<section class="hero">
+    <div class="rellax-holder">
+                <img class="rellax" data-rellax-speed="0" src="img/<%- parallax_image[0].parallax_image %>"  alt="">
+                <img class="rellax r2" data-rellax-speed="-5" src="img/<%- parallax_image[1].parallax_image %>"  alt="">
+                <img class="rellax" data-rellax-speed="1" src="img/<%- parallax_image[2].parallax_image %>" alt="">
+                <img class="rellax" data-rellax-speed="-1" src="img/<%- parallax_image[3].parallax_image %>"  alt="">
+                <img class="rellax" data-rellax-speed="1" src="img/<%- parallax_image[4].parallax_image %>"  alt="">
+                <img class="rellax bottom" data-rellax-speed="1" src="img/<%- parallax_image[5].parallax_image %>" alt="">
+                <img class="rellax" data-rellax-speed="-2" src="img/<%- parallax_image[6].parallax_image %>"  alt="">
+                <img class="rellax bottom" data-rellax-speed="0" src="img/<%- parallax_image[7].parallax_image %>"  alt="">
+                <img class="rellax bottom side" data-rellax-speed="0" src="img/<%- parallax_image[8].parallax_image %>"  alt="">
+    </div>
+    <div class="container">
+        <div class="title">
+                <h1><%- parallax_text[0].parallax_title  %></h1>
+            <div class="explore-holder">
+                <div class="explore-icon">
+                    <div class="explore-knob"></div>
+                </div>
+                <div class="explore-text"><%- parallax_text[0].parallax_text  %></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="superheroes" class="bg-section">
+    <div class="row mobil-direction-column row-first">
+        <div class="column"></div>
+        <div class="column mWidt100">
+            <h2><%- parallax_text[0].parallax_title  %></h2>
+        </div>
+        <div class="column"></div>
+    </div>
+    <div class="row mobil-direction-column">
+        <div class="column">
+            <div class="fixed-nav">
+                <div class="explore-holder">
+                    <div class="explore-icon">
+                        <div class="explore-knob"></div>
+                    </div>
+                    <div class="explore-text">
+                        <a href="javascript:void(0)" id="section1" class="nav-title active"><b><%- menu_title[0].title %></b></a>
+                        <% for(var i=1; i<menu_title.length; i++) { %>
+                        <a href="javascript:void(0)" id="section<%- i+1 %>" class="nav-title"><b><%- menu_title[i].title %></b></a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column desc"> 
+            <p><%- prag_text[0].prag %></p>
+            <div class="img-holder">
+                <img class="lw" src="img/<%- supheroimg[0].image %>" alt="">
+            </div>
+            <p><%- prag_text[1].prag %></p>
+        </div>
+        <div class="column">
+            <div class="parallax-holder">
+                <div class="parallax-bg">
+                </div>
+                <div class="parallax-img-holder"><img src="img/<%- supheroimg[1].image %>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mobil-direction-column">
+        <div class="column">
+            <div class="fixed-nav">
+            </div>
+        </div>
+        <div class="column desc">
+            <p><%- prag_text[2].prag %> <a
+                        href="<%- link[0].url %>" target="_blank"><b> <%- link[0].desc %></b></a> <%- prag_text[3].prag %></p>
+            <p><%- prag_text[4].prag %><a
+                        href="<%- link[1].url %>" target="_blank"><b><%- link[1].desc %></b></a>
+            </p>
+            <div class="img-holder">
+                <img src="img/<%- supheroimg[2].image %>" alt="">
+            </div>
+            <p><%- prag_text[5].prag %></p>
+        </div>
+        <div class="column mobil-r3-space">
+            <div class="parallax-holder">
+                <div class="parallax-bg">
+                </div>
+                <div class="parallax-img-holder"><img src="img/<%- supheroimg[3].image %>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="forward" class="bg-section">
+    <div class="row mobil-direction-column row-second">
+        <div class="column"></div>
+        <div class="column">
+            <h2><%- parallax_text[1].parallax_title %></h2>
+        </div>
+        <div class="column"></div>
+    </div>
+    <div class="row mobil-direction-column">
+        <div class="column">
+            <div class="fixed-nav">
+            </div>
+        </div>
+        <div class="column desc">
+            <p><b><%- prag_text[6].prag %></b></p>
+            <div class="subtitle"><%- parallax_text[2].parallax_title %></div>
+            <p><%- prag_text[7].prag %></p>
+
+            <div class="img-holder">
+                <img src="img/<%- supheroimg[4].image %>" alt="">
+            </div>
+            <div class="subtitle"><%- parallax_text[3].parallax_title %></div>
+            <p><%- prag_text[8].prag %> <a
+                        href="<%- link[2].url %>"
+                        target="_blank"><b><%- link[2].desc %></b></a> <%- prag_text[9].prag %></p>
+        </div>
+        <div class="column mobil-r3-space">
+            <div class="parallax-holder">
+                <div class="parallax-bg"></div>
+                <div class="parallax-img-holder"><img src="img/<%- supheroimg[5].image %>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mobil-direction-column">
+        <div class="column">
+            <div class="fixed-nav">
+            </div>
+        </div>
+        <div class="column desc">
+            <div class="subtitle"><%- parallax_text[4].parallax_title %></div>
+            <div class="img-holder">
+                <img src="img/<%- supheroimg[6].image %>" alt="">
+            </div>
+            <p><%- prag_text[10].prag %>
+                <a href="<%- link[3].url %>" target="_blank"><b><%- link[3].desc %></b></a>
+                <%- prag_text[11].prag %> <a
+                        href="<%- link[4].url %>"
+                        target="_blank"><b><%- link[4].desc %></b></a>
+            </p>
+            <p><%- prag_text[12].prag %> </p>
+        </div>
+        <div class="column mobil-r4-space">
+            <div class="parallax-holder">
+                <div class="parallax-bg"></div>
+                <div class="parallax-img-holder"><img src="img/<%- supheroimg[7].image %>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="initiatives" class="">
+    <div class="initiatives-top">
+        <div class="title"><%- keyinitiatives[0].title %></div>
+        <div class="desc"><%- keyinitiatives[0].desc %>
+</div>
+    </div>
+    <div class="initiatives-bottom">
+        <!-- Row ayarı yap -->
+        <% for (var i = 1; i<keyinitiatives.length; i+=2) { %>
+        <div class="row initiative-holder">
+            <% if (i != keyinitiatives.length - 1) { %>
+            <div class="row initiative-item">
+                <div class="initiative-icon"><a href="<%- keyinitiatives[i].url %>" target="_blank"><img
+                            src="img/<%- keyinitiatives[i].image %>" alt=""></a></div>
+                <div class="initiative-text"><a href="<%- keyinitiatives[i].url %>"
+                        target="_blank"><b><%- keyinitiatives[i].title %></b></a> <%- keyinitiatives[i].desc %></div>
+            </div>
+            
+            <div class="row initiative-item">
+                <div class="initiative-icon"><a href="<%- keyinitiatives[i+1].url %>" target="_blank"><img
+                            src="img/<%- keyinitiatives[i+1].image %>" alt=""></a></div>
+                <div class="initiative-text"><a href="<%- keyinitiatives[i+1].url %>"
+                        target="_blank"><b><%- keyinitiatives[i+1].title %></b></a> <%- keyinitiatives[i+1].desc %></div>
+            </div>
+            <% } %>
+            <% if ( i == keyinitiatives.length - 1 ) { %>
+                <div class="row">
+                    <div class="initiative-icon"><a href="<%- keyinitiatives[i].url %>" target="_blank"><img
+                                src="img/<%- keyinitiatives[i].image %>" alt=""></a></div>
+                    <div class="initiative-text"><a href="<%- keyinitiatives[i].url %>"
+                            target="_blank"><b><%- keyinitiatives[i].title %></b></a> <%- keyinitiatives[i].desc %></div>
+                </div>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+</section>
+<section id="journeysofar" class="bg-section map-section">
+    <a id="map" class="anchor"></a>
+    <div class="cursor-holder desktop">
+        <div class="drag"><img src="img/<%- journey_so_far[0].cursor_map.cur_drag %>" alt="">
+            <div class="pin"><img src="img/img/<%- journey_so_far[0].cursor_map.cur_pin %>" alt=""></div>
+        </div>
+        <img class="click" src="img/img/<%- journey_so_far[0].cursor_map.cur_click %>" alt="">
+    </div>
+    <div class="map-container">
+        <div class="map-size">
+            <div class="map-holder">
+                <div class="map-top-info">
+                    <div class="title"><%- journey_so_far[0].paragraph_map.pm_title %></div>
+                    <div class="desc">
+                        <p><%- journey_so_far[0].paragraph_map.pm_p1 %> </p>
+                        <div class="bold">
+                            <%- journey_so_far[0].paragraph_map.pm_p2 %> <div class="ib"><span><b><%- project.length %> key
+                                projects</b></span></div>
+                                <%- journey_so_far[0].paragraph_map.pm_p3 %>
+                        </div>
+                    </div>
+                    <div class="explore-map-icon desktop">
+                        <div class="explore-map-icon-bg"><img src="img/<%- journey_so_far[0].arrow_map.arrow_bg2 %>" alt=""></div>
+                        <div class="explore-map-content">
+                            <div class="explore-map-text"><%- journey_so_far[0].arrow_map.am_text %></div>
+                            <div class="explore-map-arrow"><img src="img/<%- journey_so_far[0].arrow_map.arrow2 %>" alt=""></div>
+                        </div>
+                    </div>      
+                </div>
+                <div class="map-carousel">
+                    <% project.forEach(function(project, index) { %>
+                        <div class="map-item">
+                            <div class="map-img"><img src="img/<%- project.image %>" /></div>
+                            <div class="map-info">
+                                <a href="<%- project.url %>" class="title"><%- project.name %></a>
+                                <div class="desc"><%- project.desc %></div>
+                                <a href="<%- project.url %>" class="map-detail-btn"><span><%- project.detail %></span></a>
+                            </div>
+                        </div>
+                    <% }) %>   
+                </div>
+            </div>
+            <div class="progress-holder desktop">
+                <div class="title"><%- journey_so_far[0].bottom_text.bt_text %> <a
+                        href="<%- journey_so_far[0].bottom_text.bt_url %>" target="_blank">
+                        
+                        <div class="ib large"><span><b><%- journey_so_far[0].bottom_text.bt_links.seo1 %></b></span> </div>
+                        <div class="ib large"><span><b><%- journey_so_far[0].bottom_text.bt_links.seo2 %></b></span> </div>
+                        <div class="ib large"><span><b><%- journey_so_far[0].bottom_text.bt_links.seo3 %></b></span> </div>
+                        <div class="ib large"><span><b><%- journey_so_far[0].bottom_text.bt_links.seo4 %></b></span> </div>
+                        
+                        
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <div class="map-nav-bottom">
+        <div class="explore-map-icon explore-map-bottom desktop">
+            <div class="explore-map-icon-bg"><img src="img/<%- journey_so_far[0].arrow_map.arrow_bg1 %>" alt=""></div>
+            <div class="explore-map-content">
+                <div class="explore-map-text"><%- journey_so_far[0].arrow_map.am_text %></div>
+                <div class="explore-map-arrow"><img src="img/<%- journey_so_far[0].arrow_map.arrow1 %>" alt=""></div>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="row">
+                <% for (var i=0; i<project.length; i+=2 ) { %>
+                    <div class="legend" id="item<%- i+1 %>"><%- project[i].name %></div>
+                <% } %>
+            </div>
+            <div class="bg"><img src="img/<%- journey_so_far[0].background_img.map_progress_bg %>"></div>
+            <div class="row">
+                <% for (var i=1; i<project.length; i+=2) { %>
+                    <div class="legend" id="item<%- i+1 %>"><%- project[i].name %></div>
+                <% } %>
+            </div>   
+        </div>
+</section>

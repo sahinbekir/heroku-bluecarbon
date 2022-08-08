@@ -1,0 +1,143 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<header>
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li><a href="/" class="nav-link px-2 link-secondary">BlueCarbon-Site</a></li>
+    <li><a href="/hero-data" class="nav-link px-2 link-secondary">Heros-Data</a></li>
+    <li><a href="/superhero-data" class="nav-link px-2 link-secondary">SuperHeros-Data</a></li>
+    <li><a href="/text-data" class="nav-link px-2 link-secondary">Text-Data</a></li>
+    <li><a href="/keyinitiative-data" class="nav-link px-2 link-secondary">KeyInitiatives-Data</a></li>
+    <li><a href="/journeysofar-data" class="nav-link px-2 link-secondary">JourneySofar-Data</a></li>
+    <li><a href="/project-data" class="nav-link px-2 link-secondary">Projects-Data</a></li>
+    <li><a href="/admin" class="nav-link px-2 link-secondary">Logout</a></li>
+  </ul>
+  <h1></h1>
+</header>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">SuperHeros Data</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead">Admin.</p>
+  </div>
+  
+
+  <div class="row justify-content-center">
+    <% if(infoSubmitObj != '') { %>
+      <div class="col-4 alert alert-success" role="alert">
+        <%= infoSubmitObj %>
+      </div>
+    <% } %>
+    
+    <% if(infoErrorsObj != '') { %>
+      <div class="col-4 alert alert-danger" role="alert">
+        <%= infoErrorsObj[0].message %>
+      </div>
+    <% } %>
+  </div>
+</div>
+<br>
+<h1 class="center"><strong><b>SuperHeros Images</b></strong></h1>
+<br>
+<table>
+  <tr>
+    <th>Num</th>
+    <th>Id</th>
+    <th>Image</th>
+    
+  </tr>
+  <% for (var i=0; i<superheros_image.length; i++) { %>
+  <tr>
+    <td> <b>#<%- i %></b> </td>
+    <td><%- superheros_image[i]._id %></td>
+    <td><%- superheros_image[i].image %></td>
+
+  </tr>
+  <% } %>
+</table>
+<br>
+<br>
+<div class="row justify-content-center">
+
+  
+
+  <div class="col-8">
+
+    <form action="/superhero-data" enctype="multipart/form-data" method="POST">
+    
+      <div class="row g-3">
+
+        
+        <div class="col-12">
+          <label for="id" class="form-label">SuperHeros Image ID</label>
+          <input type="id" name="supheroimg_id" id="id" value="null" class="form-control" required>
+        </div>
+        
+
+        <div class="col-12">
+          <label for="image">Image</label>
+          <input type="file" class="form-control" name="suphero_image" accept="image/*">
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+
+      </div>
+    
+    </form>
+  </div>
+</div>
+<br><br>
+<h1 class="center"><strong><b>Menu Titles</b></strong></h1>
+<table>
+  <tr>
+    <th>Num</th>
+    <th>Id</th>
+    <th>Title</th>
+    
+    
+  </tr>
+  <% for (var i=0; i<menutitle.length; i++) { %>
+  <tr>
+    <td> <b>#<%- i %></b> </td>
+    <td><%- menutitle[i]._id %></td>
+    <td><%- menutitle[i].title %></td>
+  </tr>
+  <% } %>
+</table>
+<br><br>
+<div class="row justify-content-center">
+
+  
+    
+  <div class="col-8">
+
+    <form action="/superhero-data" enctype="multipart/form-data" method="POST">
+    
+      <div class="row g-3">
+
+        
+        <div class="col-12">
+          <label for="id" class="form-label">Menu Title ID</label>
+          <input type="id" name="menu_title_id" id="id" value="null" class="form-control" required>
+        </div>
+        
+
+        <div class="col-12">
+          <label for="text" class="form-label">Title</label>
+          <input type="text" name="menu_title" id="text" class="form-control" required>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+
+      </div>
+    
+    </form>
+
+  </div>
+</div>
+<br><br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  

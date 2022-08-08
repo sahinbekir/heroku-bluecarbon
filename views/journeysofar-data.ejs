@@ -1,0 +1,278 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<header>
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li><a href="/" class="nav-link px-2 link-secondary">BlueCarbon-Site</a></li>
+    <li><a href="/hero-data" class="nav-link px-2 link-secondary">Heros-Data</a></li>
+    <li><a href="/superhero-data" class="nav-link px-2 link-secondary">SuperHeros-Data</a></li>
+    <li><a href="/text-data" class="nav-link px-2 link-secondary">Text-Data</a></li>
+    <li><a href="/keyinitiative-data" class="nav-link px-2 link-secondary">KeyInitiatives-Data</a></li>
+    <li><a href="/journeysofar-data" class="nav-link px-2 link-secondary">JourneySofar-Data</a></li>
+    <li><a href="/project-data" class="nav-link px-2 link-secondary">Projects-Data</a></li>
+    <li><a href="/admin" class="nav-link px-2 link-secondary">Logout</a></li>
+  </ul>
+</header>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">JourneySoFar Data</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead">Admin.</p>
+  </div>
+  <div class="row justify-content-center">
+
+  
+  
+    <div class="col-8">
+  <% if(infoSubmitObj != '') { %>
+    <div class="col-8 alert alert-success" role="alert">
+      <%= infoSubmitObj %>
+    </div>
+  <% } %>
+
+  <% if(infoErrorsObj != '') { %>
+    <div class="col-8 alert alert-danger" role="alert">
+      <%= infoErrorsObj[0].message %>
+    </div>
+  <% } %>
+</div></div>
+</div>
+<br>
+<h1 class="center"><strong><b>JourneySoFar:Arrow</b></strong></h1>
+<br>
+
+
+
+
+
+<br>
+<br>
+<div class="row justify-content-center">
+
+  
+  
+  <div class="col-8">
+    
+    <form action="/journeysofar-data" enctype="multipart/form-data" method="POST">
+    
+      <div class="row g-3">
+
+        <table>
+          <tr>
+            <th>Num</th>
+            <th>Id</th>
+            <th>Arrow Text</th>
+            <th>Arrow BG1</th>
+            <th>Arrow1</th>
+            <th>Arrow BG2</th>
+            <th>Arrow2</th>
+          </tr>
+        
+          <% for (var i=0; i<jsfData.length; i++) { %>
+          <tr>
+            <td> <b>#<%- i %></b> </td>
+            <td><%- jsfData[i]._id %></td>
+            <td><%- jsfData[i].arrow_map.am_text %></td>
+            <td><%- jsfData[i].arrow_map.arrow_bg1 %></td>
+            <td><%- jsfData[i].arrow_map.arrow1 %></td>
+            <td><%- jsfData[i].arrow_map.arrow_bg2 %></td>
+            <td><%- jsfData[i].arrow_map.arrow2 %></td>
+          </tr>
+          <% } %>
+        </table>
+        <br>
+        <div class="col-12">
+          <label for="jsf_id" class="form-label">JourneySoFar ID</label>
+          <input type="jsf_id" name="jsf_id" id="jsf_id" value="null" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label for="text" class="form-label">Arrow Text</label>
+          <input type="text" name="am_text" id="text" class="form-control" required>
+        </div><div class="col-12">
+        <div class="col-12">
+          <label for="image">BG1 Image</label>
+          <input type="file" class="form-control" name="arrow_bg1" accept="image/*">
+        </div>
+        <div class="col-12">
+          <label for="image">Arrow1 Image</label>
+          <input type="file" class="form-control" name="image2" accept="image/*">
+          <div class="col-12">
+            <label for="image">BG2 Image</label>
+            <input type="file" class="form-control" name="image11" accept="image/*">
+          </div>
+          <div class="col-12">
+            <label for="image">Arrow2 Image</label>
+            <input type="file" class="form-control" name="image21" accept="image/*">
+        </div>
+        <br>
+        <br>
+        <h1 class="center"><strong><b>JourneySoFar:BG Images</b></strong></h1>
+        <br><br>
+        <table>
+          <tr>
+            <th>Num</th>
+            <th>Id</th>
+            <th>Loading BG </th>
+            <th>Bottom BG </th>
+          </tr>
+        
+          <% for (var i=0; i<jsfData.length; i++) { %>
+          <tr>
+            <td> <b>#<%- i %></b> </td>
+            <td><%- jsfData[i]._id %></td>
+            <td><%- jsfData[i].background_img.loading_img %></td>
+            <td><%- jsfData[i].background_img.map_progress_bg %></td>
+          </tr>
+          <% } %>
+        </table>
+        <br>
+        <br>
+        <div class="col-12">
+          <label for="image">Loading BG Image</label>
+          <input type="file" class="form-control" name="image6" accept="image/*">
+        </div>
+        <div class="col-12">
+          <label for="image">Bottom BG Image</label>
+          <input type="file" class="form-control" name="image7" accept="image/*">
+        </div>
+        
+        <br>
+        <br><h1 class="center"><strong><b>JourneySoFar:Cursor</b></strong></h1>
+        <br><br>
+        <table>
+          <tr>
+            <th>Num</th>
+            <th>Id</th>
+            <th>Cursor Drag </th>
+            <th>Cursor Pin </th>
+            <th>Cursor Click </th>
+          </tr>
+        
+          <% for (var i=0; i<jsfData.length; i++) { %>
+          <tr>
+            <td> <b>#<%- i %></b> </td>
+            <td><%- jsfData[i]._id %></td>
+            <td><%- jsfData[i].cursor_map.cur_drag %></td>
+            <td><%- jsfData[i].cursor_map.cur_pin %></td>
+            <td><%- jsfData[i].cursor_map.cur_click %></td>
+          </tr>
+          <% } %>
+        </table>
+        <br>
+        <br>
+        <div class="col-12">
+          <label for="image">Cursor Drag</label>
+          <input type="file" class="form-control" name="image3" accept="image/*">
+        </div>
+        <div class="col-12">
+          <label for="image">Cursor Pin</label>
+          <input type="file" class="form-control" name="image4" accept="image/*">
+        </div>
+        <div class="col-12">
+          <label for="image">Cursor Click</label>
+          <input type="file" class="form-control" name="image5" accept="image/*">
+        </div>
+        <br>
+        <br><h1 class="center"><strong><b>JourneySoFar:Text</b></strong></h1>
+        <br><br>
+        <table>
+          <tr>
+            <th>Num</th>
+            <th>Id</th>
+            <th>Text Title</th>
+            <th>Text 1</th>
+            <th>Text 2</th>
+            <th>Text 3</th>
+          </tr>
+        
+          <% for (var i=0; i<jsfData.length; i++) { %>
+          <tr>
+            <td> <b>#<%- i %></b> </td>
+            <td><%- jsfData[i]._id %></td>
+            <td><%- jsfData[i].paragraph_map.pm_title %></td>
+            <td><%- jsfData[i].paragraph_map.pm_p1 %></td>
+            <td><%- jsfData[i].paragraph_map.pm_p2 %></td>
+            <td><%- jsfData[i].paragraph_map.pm_p3 %></td>
+          </tr>
+          <% } %>
+        </table>
+        <br>
+        <br>
+        <div class="col-12">
+          <label for="title" class="form-label">Text Title</label>
+          <input type="title" name="title" id="title" class="form-control" required>
+        </div><div class="col-12">
+        <div class="col-12">
+          <label for="text" class="form-label">Text 1</label>
+          <textarea name="text1" id="text" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+        </div><div class="col-12">
+          <label for="text" class="form-label">Text 2</label>
+          <textarea name="text2" id="text" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+        </div><div class="col-12">
+          <label for="text" class="form-label">Text 3</label>
+          <textarea name="text3" id="text" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+        <br>
+        <br><h1 class="center"><strong><b>JourneySoFar:Bottom Text</b></strong></h1>
+        <br><br>
+        <table>
+          <tr>
+            <th>Num</th>
+            <th>Id</th>
+            <th>Text </th>
+            <th>Url </th>
+            <th>Seo's </th>
+          </tr>
+        
+          <% for (var i=0; i<jsfData.length; i++) { %>
+          <tr>
+            <td> <b>#<%- i %></b> </td>
+            <td><%- jsfData[i]._id %></td>
+            <td><%- jsfData[i].bottom_text.bt_text %></td>
+            <td><%- jsfData[i].bottom_text.bt_url %></td>
+            <td><%- jsfData[i].bottom_text.bt_links %></td>
+          </tr>
+          <% } %>
+        </table>
+        <br>
+        </div><div class="col-12">
+          <label for="desc" class="form-label">Text</label>
+          <input type="desc" name="desc" id="desc" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label for="url" class="form-label">Url</label>
+          <input type="url" name="url" id="url" class="form-control">
+        </div>
+        </div><div class="col-12">
+          <label for="text" class="form-label">Seo 1</label>
+          <input type="text" name="seo1" id="text" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label for="text" class="form-label">Seo 2</label>
+          <input type="text" name="seo2" id="text" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label for="text" class="form-label">Seo 3</label>
+          <input type="text" name="seo3" id="text" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label for="text" class="form-label">Seo 4</label>
+          <input type="text" name="seo4" id="text" class="form-control" required>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+        <br><br><br>
+
+      </div>
+    
+    </form>
+    
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
