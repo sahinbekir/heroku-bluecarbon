@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 //process.env.MONGODB_URI
-console.log("mdb_uri:" ,MONGODB_URI)
+console.log("mdb_uri:" ,process.env.MONGODB_URI)
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'console error: '));
