@@ -37,15 +37,15 @@ exports.loginpost = async(req, res) => {
 // BlueCarbon Model
 exports.homepage = async(req, res) => {
     try {
-        const parallax_image = await PrllxImg.find({}).limit(limitNumber);
-        const parallax_text = await PrllxText.find({}).limit(limitNumber);
-        const menu_title = await MenuTitle.find({}).limit(limitNumber);
-        const project = await Project.find({}).limit(limitNumber);
-        const keyinitiatives = await KeyInitiatives.find({}).limit(limitNumber);
-        const supheroimg = await SupHeroImg.find({}).limit(limitNumber);
-        const link = await Link.find({}).limit(limitNumber);
-        const prag_text = await PragText.find({}).limit(limitNumber);
-        const journey_so_far = await JourneySoFar.find({}).limit(limitNumber);
+        const parallax_image = await PrllxImg.find({}).sort({_id: 1}).limit(limitNumber);
+        const parallax_text = await PrllxText.find({}).sort({_id: 1}).limit(limitNumber);
+        const menu_title = await MenuTitle.find({}).sort({_id: 1}).limit(limitNumber);
+        const project = await Project.find({}).sort({_id: 1}).limit(limitNumber);
+        const keyinitiatives = await KeyInitiatives.find({}).sort({_id: 1}).limit(limitNumber);
+        const supheroimg = await SupHeroImg.find({}).sort({_id: 1}).limit(limitNumber);
+        const link = await Link.find({}).sort({_id: 1}).limit(limitNumber);
+        const prag_text = await PragText.find({}).sort({_id: 1}).limit(limitNumber);
+        const journey_so_far = await JourneySoFar.find({}).sort({_id: 1}).limit(limitNumber);
 
         res.render('index', { title: 'Blue Carbon' ,parallax_image, parallax_text, menu_title, project,
         keyinitiatives, supheroimg, link, prag_text, journey_so_far});
@@ -58,8 +58,8 @@ exports.homepage = async(req, res) => {
 exports.parallax = async(req, res) => {
     const infoErrorsObj = req.flash('infoErrors');
     const infoSubmitObj = req.flash('infoSubmit');
-    const parallax_image = await PrllxImg.find({}).limit(limitNumber);
-    const parallax_text = await PrllxText.find({}).limit(limitNumber);
+    const parallax_image = await PrllxImg.find({}).sort({_id: 1}).limit(limitNumber);
+    const parallax_text = await PrllxText.find({}).sort({_id: 1}).limit(limitNumber);
 
     res.render('hero-data', { title: 'Parallax Image and Title', infoErrorsObj, infoSubmitObj, parallax_image, parallax_text  } );
 };
@@ -122,8 +122,8 @@ exports.parallaxpost = async(req, res) => {
 exports.superheros = async(req, res) => {
   const infoErrorsObj = req.flash('infoErrors');
   const infoSubmitObj = req.flash('infoSubmit');
-  const superheros_image = await SupHeroImg.find({}).limit(limitNumber);
-  const menutitle = await MenuTitle.find({}).limit(limitNumber);
+  const superheros_image = await SupHeroImg.find({}).sort({_id: 1}).limit(limitNumber);
+  const menutitle = await MenuTitle.find({}).sort({_id: 1}).limit(limitNumber);
   res.render('superhero-data', { title: 'Edit Superhero ', infoErrorsObj, infoSubmitObj, superheros_image , menutitle } );
 };
 exports.superherospost = async(req, res) => {
@@ -173,8 +173,8 @@ exports.superherospost = async(req, res) => {
 exports.textdata = async(req, res) => {
   const infoErrorsObj = req.flash('infoErrors');
   const infoSubmitObj = req.flash('infoSubmit');
-  const links = await Link.find({}).limit(limitNumber);
-  const pragtext = await PragText.find({}).limit(limitNumber);
+  const links = await Link.find({}).sort({_id: 1}).limit(limitNumber);
+  const pragtext = await PragText.find({}).sort({_id: 1}).limit(limitNumber);
   res.render('text-data', { title: 'Edit PragText', infoErrorsObj, infoSubmitObj, links, pragtext  } );
 };
 exports.textdatapost = async(req, res) => {
@@ -214,7 +214,7 @@ exports.textdatapost = async(req, res) => {
 exports.keyinitiatives = async(req, res) => {
   const infoErrorsObj = req.flash('infoErrors');
   const infoSubmitObj = req.flash('infoSubmit');
-  const keyinitiatives = await KeyInitiatives.find({}).limit(limitNumber);
+  const keyinitiatives = await KeyInitiatives.find({}).sort({_id: 1}).limit(limitNumber);
   res.render('keyinitiative-data', { title: 'Edit Key Initiatives', infoErrorsObj, infoSubmitObj, keyinitiatives  } );
 };
 exports.keyinitiativespost = async(req, res) => {
@@ -260,7 +260,7 @@ exports.keyinitiativespost = async(req, res) => {
 exports.journeySoFar = async(req, res) => {
   const infoErrorsObj = req.flash('infoErrors');
   const infoSubmitObj = req.flash('infoSubmit');
-  const jsfData = await JourneySoFar.find({}).limit(limitNumber);
+  const jsfData = await JourneySoFar.find({}).sort({_id: 1}).limit(limitNumber);
   res.render('journeysofar-data', { title: 'Edit JourneySoFar', infoErrorsObj, infoSubmitObj, jsfData } );
 };
 exports.journeySoFarpost = async(req, res) => {
@@ -411,7 +411,7 @@ exports.journeySoFarpost = async(req, res) => {
 exports.project = async(req, res) => {
   const infoErrorsObj = req.flash('infoErrors');
   const infoSubmitObj = req.flash('infoSubmit');
-  const project = await Project.find({}).limit(limitNumber);
+  const project = await Project.find({}).sort({_id: 1}).limit(limitNumber);
 
   res.render('project-data', { title: 'Edit Project', infoErrorsObj, infoSubmitObj, project  } );
 };
